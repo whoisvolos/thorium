@@ -1,0 +1,11 @@
+obj\Debug\TOP.exe
+obj\Debug\TOP.xml
+obj\Debug\TOP.pdb
+bin\Debug\TOP.exe
+bin\Debug\TOP.pdb
+bin\Debug\TOP.xml
+bin\Debug\Visualisaton.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WindowsApplication1.Form1.resources
+obj\Debug\WindowsApplication1.Resources.resources
+obj\Debug\Tao_TOP.vbproj.GenerateResource.Cache

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="T.H.O.R.I.U.M">
+</Property><Property Name="Файл решения" Value="D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\T.H.O.R.I.U.M.sln">
+</Property><Property Name="Файл параметров пользователя" Value="D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\T.H.O.R.I.U.M.suo">
+</Property><Property Name="Date" Value="9 июня 2011 г.">
+</Property><Property Name="Time" Value="10:04">
+</Property><Property Name="Номер записи" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="T.H.O.R.I.U.M.sln" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\T.H.O.R.I.U.M.sln">
+</Event><Event ErrorLevel="0" Project="" Source="T.H.O.R.I.U.M.suo" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\T.H.O.R.I.U.M.suo">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="T.H.O.R.I.U.M.vbproj" Description="Успешно создана резервная копия файла проекта: D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\T.H.O.R.I.U.M.vbproj">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="T.H.O.R.I.U.M.vbproj.user" Description="Резервная копия проекта успешно создана как D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\T.H.O.R.I.U.M.vbproj.user">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="ApplicationEvents.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\ApplicationEvents.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Matrix_inverser.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\Matrix_inverser.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="FEM.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\FEM.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Form1.designer.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\Form1.designer.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Form1.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\Form1.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="FTP.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\FTP.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="mt19937ar.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\mt19937ar.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="TOP_solver.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\TOP_solver.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Linear_algebra.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\Linear_algebra.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="MIP.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\MIP.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\AssemblyInfo.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\My Project\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\Application.Designer.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\My Project\Application.Designer.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\Resources.Designer.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\My Project\Resources.Designer.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\Settings.Designer.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\My Project\Settings.Designer.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="TOP.vb" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\TOP.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\Application.myapp" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\My Project\Application.myapp">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\Settings.settings" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\My Project\Settings.settings">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Logo\Logo-point.ico" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\Logo\Logo-point.ico">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Logo\Logo-point-green.ico" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\Logo\Logo-point-green.ico">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="app.config" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\app.config">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Logo\Logo-point-red.ico" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\Logo\Logo-point-red.ico">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\app.manifest" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\My Project\app.manifest">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="T.H.O.R.I.U.M_TemporaryKey.pfx" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\T.H.O.R.I.U.M_TemporaryKey.pfx">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Form1.resx" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\Form1.resx">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\Resources.resx" Description="Успешно создана резервная копия файла D:\4110\T.H.O.R.I.U.M\THORIUM_2010_05_06\THORIUM_2010_05_06\T.H.O.R.I.U.M._source\Backup\My Project\Resources.resx">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="T.H.O.R.I.U.M.vbproj" Description="Проект успешно преобразован">
+</Event><Event ErrorLevel="3" Project="T.H.O.R.I.U.M" Source="T.H.O.R.I.U.M.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="T.H.O.R.I.U.M.sln" Description="Преобразование решения успешно завершено">
+</Event><Event ErrorLevel="3" Project="" Source="T.H.O.R.I.U.M.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="app.config" Description="Файл успешно преобразован. Все теги &lt;supportedRuntime&gt; и &lt;requiredRuntime&gt; были удалены, чтобы обеспечить построение проекта и запуск в Visual Studio 2005.">
+</Event><Event ErrorLevel="3" Project="T.H.O.R.I.U.M" Source="app.config" Description="Converted">
+</Event></UpgradeLog>

@@ -1,0 +1,47 @@
+$ Project thermal-optical properties
+$
+G_MEDIUM       3
+
+
+$ FTOP  Number	R_dif	R_ref	A	D	CDF
+$ Gold-coated surfaces
+FTOP    1       0.900   0.0     0.100   0.0      
+
+$ FTOP  Number	R_dif	R_ref	A	D	CDF
+$ Outer first and second shields surfaces
+FTOP    2       0.800   0.0     0.200   0.0      
+
+
+
+$Medium Number	n	k	lambda	c
+	
+$ Radiation screen film properties
+MEDIUM1 1       1.1     1E-5    0.24    1000.
+        1       1       1       1       1       1
+
+$ Outer first and second shields surfaces
+MEDIUM1 11      1.1     1E-5    0.24    1000.
+        1       2       1       1       1       1
+
+
+
+$ Mirror properties
+MEDIUM1 2       1.1     1E-5    0.45    1130.
+        1       1       1       1       1       1
+
+
+$ Vacuum
+MEDIUM1 3       1.0     0.0     0.0     0.0
+        1       1       1       1       1       1
+
+$Solution parameters
+I_PARAM EULER_V 0.0     1e+7    200.0   1000    0.990   1.010
+
+$ Initial temperature 
+T_ALL   1       300.
+
+$ SUN FROM EARTH ORBIT
+RSOURCE1 1      0.0     0.0     -1.5E+113.85E+265788.0          1000
+
+ENDDATA
+

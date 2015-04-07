@@ -1,0 +1,2424 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+T.H.O.R.I.U.M
+</name>
+</assembly>
+<members>
+<member name="F:THORIUM.Model_item.Name">
+	<summary>
+ Name of model item. The number identification usually used, but in some reasons name can be more useful.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model_item.Type">
+	<summary>
+ Type of model item. For instance, type can be used for subdividing materials to MAT1, MAT2, MAT8 and etc.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model_item.Number">
+	<summary>
+ Number of model item. The common used identificator.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model_item.String_in_file">
+	<summary>
+ The string, which represent model item in file.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model_item.Fields_array">
+	<summary>
+ Array of fields, which represent model item in file.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model_item.Enabled">
+	<summary>
+ Is model item used or not?
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model_item.Children">
+	<summary>
+ Model itemes, which were created with this model item
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Model_item.Load">
+	<summary>
+ Sub can be used for uploading model item fields from array which represent model item in file.
+ String_in_file field used as an information source.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Model_item.Prepare_Save">
+	<summary>
+ Sub can be used for preparing array of model item fields.
+ Fields used as an information source.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Model_item.Save">
+	<summary>
+ Sub can be used for downloading model item fields to string which represent model item in file.
+ String_in_file field used as an information destination.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Model_item.Convert_string_in_file_to_array_1(System.String@)">
+	<summary>
+ Function for conversion element in file representation string to array of element's fields
+ </summary>
+	<param name="in_String">Element in file representation string</param>
+	<returns>Array of element's fields</returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Model_item.Convert_string_in_file_to_array_2(System.String@)">
+	<summary>
+ Function for conversion element in file representation string to array of element's fields
+ </summary>
+	<param name="in_String">Element in file representation string</param>
+	<returns>Array of element's fields</returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Model_item.Convert_string_in_file_to_array_3(System.String@)">
+	<summary>
+ Function for conversion element in file representation string to array of element's fields
+ </summary>
+	<param name="in_String">Element in file representation string</param>
+	<returns>Array of element's fields</returns>
+	<remarks></remarks>
+</member><member name="T:THORIUM.Model_item">
+	<summary>
+ FEM any object (i.e. any finite element, coordinate system, material, property or something else)
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Material.G">
+	<summary>
+ Stiffness matrix of material.
+ For each type of material it must be resized.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Material.Nu">
+	<summary>
+ Poisson's ratio
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Material.A">
+	<summary>
+ Thermal expansion coefficients matrix
+ For each type of material it must be resized.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Material.Rho">
+	<summary>
+ Density of material
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Material.T_reference">
+	<summary>
+ The properties of material is defined for this temperature
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Material.Ultimate_tension_stress">
+	<summary>
+ Ultimate tension stress
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Material.Ultimate_compression_stress">
+	<summary>
+ Ultimate compression stress
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Material.Ultimate_shear_stress">
+	<summary>
+ Ultimate shear stress
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Material.Damping_coefficient">
+	<summary>
+ Damping coefficient
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.MAT1">
+	<summary>
+ G(0,0) - Elasticity modulus, E
+ G(1,1) - Shear modulus, G
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.MAT2">
+	<summary>
+ G(0,0) - G11
+ G(0,1) - G12
+ G(0,2) - G13
+ G(1,1) - G22
+ G(1,2) - G23
+ G(2,2) - G33
+ A(0,0) - A1
+ A(1,1) - A2
+ A(2,2) - A3
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.MAT8.STRN">
+	<summary>
+ Flag, for declaration of theory of limit deformations usage
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.MAT8.F12">
+	<summary>
+ For Tsay-Wu theory
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.MAT8">
+	<summary>
+ G(0,0) - E1 - longitudinal direction
+ G(1,1) - E2 - transverse direction
+ G(0,1) - G12
+ G(0,2) - G1Z
+ G(1,2) - G2Z
+ A(0,0) - A1
+ A(1,1) - A2
+ Ultimate_tension_stress(0)- Xt- longitudinal direction
+ Ultimate_compression_stress(0) - Xc- longitudinal direction
+ Ultimate_tension_stress(1)- Yt- transverse direction
+ Ultimate_compression_stress(1) - Yc- transverse direction
+  </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.MAT9">
+	<summary>
+ G(0,0) - G11
+ G(0,1) - G12
+ G(0,2) - G13
+ G(0,3) - G14
+ G(0,4) - G15
+ G(0,5) - G16
+ 
+ G(1,1) - G22
+ G(1,2) - G23
+ G(1,3) - G24
+ G(1,4) - G25
+ G(1,5) - G26
+ 
+ G(2,2) - G33
+ G(2,3) - G34
+ G(2,4) - G35
+ G(2,5) - G36
+ 
+ G(3,3) - G44
+ G(3,4) - G45
+ G(3,5) - G46
+ 
+ G(4,4) - G55
+ G(3,5) - G56
+ 
+ G(5,5) - G66
+
+ A(0,0) - A1
+ A(1,1) - A2
+ A(2,2) - A3
+ A(3,3) - A4
+ A(4,4) - A5
+ A(5,5) - A6
+  </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Coordinate_system.Calculate_transition_matrices">
+	<summary>
+ Calculation transition matres from and to Cartesian rectangular coordinates.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.CORD1C">
+	<summary>
+ Cylindrical coordinate system.
+ Vector's component
+ (0) - R
+ (1) - theta
+ (2) - z
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.CORD2C">
+	<summary>
+ Cylindrical coordinate system.
+ Vector's component
+ (0) - R
+ (1) - theta
+ (2) - z
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.CORD1S">
+	<summary>
+ Spherical coordinate system.
+ Vector's component
+ (0) - phi
+ (1) - theta
+ (2) - R
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.CORD2S">
+	<summary>
+ Spherical coordinate system.
+ Vector's component
+ (0) - phi
+ (1) - theta
+ (2) - R
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Grid.Coordinate_system">
+	<summary>
+ The coordinate system number, there determined grid's coordinates.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Grid.Position">
+	<summary>
+ Grid's coordinates in related coordinate system.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Grid.CD">
+	<summary>
+ The coordinate system number, there determined grid's displacement, degrees of freedom, boundary conditions and etc. 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Grid.PS">
+	<summary>
+ Grid's constant boundary conditions (SPC) associated with.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Grid.Super_element_ID">
+	<summary>
+ Super element ID
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Grid.Face">
+	<summary>
+ Faces, which are builded on a face.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Grid.N_Face">
+	<summary>
+ Maximum index of faces, contained in Face() array
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Grid.Element">
+	<summary>
+ Elements, which are builded on a face.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Grid.N_Element">
+	<summary>
+ Maximum index of element, contained in Element() array
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PSHELL.Thickness">
+	<summary>
+ T in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PSHELL.Material_for_bending">
+	<summary>
+ MID2 in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PSHELL.Bending_thichness_parameter">
+	<summary>
+ 12I/T^3 in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PSHELL.Material_for_shear">
+	<summary>
+ MID3 in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PSHELL.Shear_thickness_to_membrane_thickness_ratio">
+	<summary>
+ TS/T in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PSHELL.Material_for_membrane_bending_coupling">
+	<summary>
+ MID4 in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PCOMP.NSM">
+	<summary>
+ Nonstructural mass per unit area
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Neighbour.Element">
+	<summary>
+ Neightbouring element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Neighbour.Face">
+	<summary>
+ Coupling face
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Neighbour.Area_1">
+	<summary>
+ Heat transfer area of first element in neighbourhood
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Neighbour.Area_2">
+	<summary>
+ Heat transfer area of first element in neighbourhood
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.Finite_element_variables">
+	<summary>
+ This class is to describe variables, calculated for many purposes.
+ I.e. stress, deformation, displasement tensors for stress analysis,
+ temperature for thermal analysis,
+ velocity and acceleration for dymanic analysis and etc. 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Finite_element.Element_property">
+	<summary>
+ Finite element property number, means material and something else.
+ PID in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Finite_element.Grid">
+	<summary>
+ Grid, which finite element consist of. 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Finite_element.Field">
+	<summary>
+ The state of element, stress, temperature, velocity and etc.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Finite_element.Face">
+	<summary>
+ Faces, which forms element surface.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Finite_element.Neighbor">
+	<summary>
+ Neightbors of element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Finite_element.N_Neighbor">
+	<summary>
+ Numbers of neighbors, contained in Neighbor() array
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Finite_element.MEDIUM">
+	<summary>
+ Element's thermal-optical properties
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Finite_element.HT_Element">
+	<summary>
+ Heat transfer element, representing finite element in heat transfer analysis
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CROD.length">
+	<summary>
+ Length of element
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.CROD.Calc_volume_mass_inertia">
+	<summary>
+ This sub calculates element mass, volume, centroid and moment of inertia in element's grids coordinate system.
+ WARNING!!! 1D-element moments of inertia are calculated with error up to 15% 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CBAR.length">
+	<summary>
+ Length of element
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.CBAR.Calc_volume_mass_inertia">
+	<summary>
+ This sub calculates element mass, volume, centroid and moment of inertia in element's grids coordinate system.
+ WARNING!!! 1D-element moments of inertia are calculated with error up to 15% 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CBEAM.length">
+	<summary>
+ Length of element
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.CBEAM.Calc_volume_mass_inertia">
+	<summary>
+ This sub calculates element mass, volume, centroid and moment of inertia in element's grids coordinate system.
+ WARNING!!! 1D-element moments of inertia are calculated with error up to 15% 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CTRIA3.Area">
+	<summary>
+ Area of element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CTRIA3.Material_orientation_angle">
+	<summary>
+ THETA in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CTRIA3.Coordinate_system">
+	<summary>
+ MCID in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CTRIA3.Offset">
+	<summary>
+ ZOFFS in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.CTRIA3.Calc_volume_mass_inertia">
+	<summary>
+ This sub calculates element mass, volume, centroid and moment of inertia in element's grids coordinate system.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CTRIA6.Area">
+	<summary>
+ Area of element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CTRIA6.Material_orientation_angle">
+	<summary>
+ THETA in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CTRIA6.Coordinate_system">
+	<summary>
+ MCoordinate_system in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CTRIA6.Offset">
+	<summary>
+ ZOFFS in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.CTRIA6.Calc_volume_mass_inertia">
+	<summary>
+ This sub calculates element mass, volume, centroid and moment of inertia in element's grids coordinate system.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CQUAD4.Area">
+	<summary>
+ Area of element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CQUAD4.Material_orientation_angle">
+	<summary>
+ THETA in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CQUAD4.Coordinate_system">
+	<summary>
+ MCoordinate_system in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CQUAD4.Offset">
+	<summary>
+ ZOFFS in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.CQUAD4.Calc_volume_mass_inertia">
+	<summary>
+ This sub calculates element mass, volume, centroid and moment of inertia in element's grids coordinate system.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CQUAD8.Area">
+	<summary>
+ Area of element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CQUAD8.Material_orientation_angle">
+	<summary>
+ THETA in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CQUAD8.Coordinate_system">
+	<summary>
+ MCoordinate_system in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CQUAD8.Offset">
+	<summary>
+ ZOFFS in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.CQUAD8.Calc_volume_mass_inertia">
+	<summary>
+ This sub calculates element mass, volume, centroid and moment of inertia in element's grids coordinate system.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.CSHEAR.Area">
+	<summary>
+ Area of element
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.CSHEAR.Calc_volume_mass_inertia">
+	<summary>
+ This sub calculates element mass, volume, centroid and moment of inertia in element's grids coordinate system.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.CTETRA.Calc_volume_mass_inertia">
+	<summary>
+ This sub calculates element mass, volume, centroid and moment of inertia in element's grids coordinate system.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.CPENTA.Calc_volume_mass_inertia">
+	<summary>
+ This sub calculates element mass, volume, centroid and moment of inertia in element's grids coordinate system.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.CHEXA.Calc_volume_mass_inertia">
+	<summary>
+ This sub calculates element mass, volume, centroid and moment of inertia in element's grids coordinate system.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Loads.SID">
+	<summary>
+ SID in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Loads.Grid_">
+	<summary>
+ G in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Loads.Coordinate_system">
+	<summary>
+ Coordinate_system in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Loads.Scale_factor">
+	<summary>
+ F for forces, M for moments, A for accelerations in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.FORCE.N">
+	<summary>
+ Components of force vector
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.MOMENT.N">
+	<summary>
+ Components of MOMENT vector
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD.Pressure">
+	<summary>
+ P in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD1.SID">
+	<summary>
+ SID in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD1.Element_number">
+	<summary>
+ EID in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD1.Load_type">
+	<summary>
+ TYPE in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD1.Load_scale">
+	<summary>
+ SCALE in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD2.Pressure">
+	<summary>
+ P in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD2.Element_number">
+	<summary>
+ EID1, EID2 and etc in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD2.THRU_Flag">
+	<summary>
+ THRU_Flag is used, when if is needs to determine Element_numbers range
+ If Ubound(Element_number) = 1 and THRU_Flag= True then output saves range,
+ else it saves only two additional elements
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD4.Element_number">
+	<summary>
+ EID, EID1 and EID2 in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD4.Pressure">
+	<summary>
+ P in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD4.Grid">
+	<summary>
+ "G1" and "G3 or G4" in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD4.Coordinate_system">
+	<summary>
+ Coordinate_system in Nastran formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD4.N">
+	<summary>
+ N1,N2 and N3 in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.PLOAD4.THRU_Flag">
+	<summary>
+ THRU_Flag is used, when if is needs to determine Element_numbers range
+ If Ubound(Element_number) = 1 and THRU_Flag= True then output saves range,
+ else it saves only two additional elements
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.GRAV.N">
+	<summary>
+ Components of force vector
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.RFORCE.R">
+	<summary>
+ Rectangular components of rotation vector
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.RFORCE.RACC">
+	<summary>
+ Scale factor for acceleration
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.LOAD.SID">
+	<summary>
+ SID in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.LOAD.Overall_scale_factor">
+	<summary>
+ S in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.LOAD.Scale_factor">
+	<summary>
+ S1,S2 and etc in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.LOAD.Load_set_id">
+	<summary>
+ L1,L2 and etc in NASTRAN formulation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.ACCEL1.Scale_factor">
+	<summary>
+ Acceleration scale factor
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.SPC.Component">
+	<summary>
+ Defines constrained degrees of freedom, i.e. 123456 - fully constrained grid
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.SPCD.Component">
+	<summary>
+ Defines degrees of freedom with enforced displacement
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.SPCOFF.Component">
+	<summary>
+ Defines degrees of freedom with enforced displacement
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.SPCOFF1.Component">
+	<summary>
+ Defines degrees of freedom with enforced displacement
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.MPC.Component">
+	<summary>
+ Defines constrained degrees of freedom, i.e. 123456 - fully constrained grid
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.String_in_file">
+	<summary>
+ The string, which represent model in file.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.T_ALL">
+	<summary>
+ Uniform initial temperature field over all of model
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.Solver_type">
+	<summary>
+ The type of solver, used for problem solution
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.Start_time">
+	<summary>
+ The solution start time, i.e. heat transfer problem will be solved for time interval from Start_time to Start_time + Lenght_time.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.Lenght_time">
+	<summary>
+ The solution finish time, i.e. heat transfer problem will be solved for time interval from Start_time to Start_time + Lenght_time.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.Step_time">
+	<summary>
+ The duration of solution time step. 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.Is_thermooptics_constant">
+	<summary>
+ If dependency is used in radiation part of the solution, then Is_thermooptics_constant = false
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.Is_thermophysics_constant">
+	<summary>
+ If dependency is used in conductive part of the solution, then Is_thermophysics_constant = false
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.Is_boundary_conditions_constant">
+	<summary>
+ If dependency is used for boundary conditions definitions, then Is_boundary_conditions_constant = false
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.Is_radiation_heat_transfer">
+	<summary>
+ Is radiation heat transfer in model? Is any unzero elemet in radiation heat transfer matrix?
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.Is_radiation_heat_sources_are_fixed">
+	<summary>
+ Is radiation heat sources are fixed, not movable? 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.N_photon">
+	<summary>
+ Number of photons, emitted from face at time of one solution step
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.K_T_min">
+	<summary>
+ The element's available temperature in case of cooling coefficient 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.K_T_max">
+	<summary>
+ The element's available temperature in case of heating coefficient 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Model.Save_step_time">
+	<summary>
+ The time step for saving data 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Model.Create_links">
+	<summary>
+ This sub fill Children fields in all of model items where possible
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Model.Create_one_link(System.Object@,System.Object[]@)">
+	<summary>
+ This sub links two model items (Elements, Grid, Element properties, Materials, Coordinate systems and etc.), one of them is a parent, another - child.
+ I.e., element CQUAD4 101 on Grid №№1001,1002, 1003, 1004 is a child for all of them,
+ and all of these Grid are a parents for it.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Model.Extract_Polygon_from_Face(THORIUM.Face[]@)">
+	<summary>
+ This function creates array of polygons, suitable for visualisation.
+ </summary>
+	<param name="Face">Incoming faces, basis for extraction</param>
+	<returns>Array of polygons, suitable for visualisation</returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Model.Extract_Polygon_colors_from_Face(Visualisation.Polygon[]@)">
+	<summary>
+ This function creates array of polygons, suitable for visualisation.
+ </summary>
+	<returns>Array of polygons, suitable for visualisation</returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Model.Create_TOP_links">
+	<summary>
+ This sub creates links in all of thermal-optical model part items 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.V_mode">
+	<summary>
+ Model visualisation mode.
+ Can be: Wireframe, With contour, Witout contour. 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.Min_T_Max_T_from_current_step">
+	<summary>
+ The Min_T and Max_T are taken from current step
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.Mode">
+	<summary>
+Application visualisation mode. Can be "NORMAL" or "HIDDEN"
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.ID">
+	<summary>
+ Computer identificator. Allows to save same file in one dir. Random 8-byte number.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.Input_filename">
+	<summary>
+ File name of input model. *.bdf or *.model file.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.Output_filename">
+	<summary>
+ File name of output model, *.model file.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.Output_txt_filename">
+	<summary>
+ Name of file for saving text results.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.Resumption">
+	<summary>
+ Should we use input *.model file for the analysis resumption or not?
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.Resumption_start_time">
+	<summary>
+ If we should use input *.model file for the analysis resumption, then which moment of time should we use to begin?
+ If Resumption_start_time  = Double.MaxValue then this parameter is not set and we should resume analysis 
+ from the last but one (предпоследний) step.
+ If Resumption_start_time is not Double.MaxValue then we should find step before given Resumption_start_time
+ and we have to begin analysis from this step.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.Resumption_length_time">
+	<summary>
+ The solution finish time, i.e. heat transfer problem will be solved for time interval from Resumption_start_time to Resumption_start_time + Resumption_length_time.
+ If Resumption_length_time = Double.MaxValue then this parameter is not set and we should perfome analysis
+ until time set in *.model file.
+ If Resumption_time is not Double.MaxValue then we should perfome analysis until set time
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.tmp_Directory">
+	<summary>
+ Path to directiry for temprorary file storing
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.FTP_mode">
+	<summary>
+ Whether Work_directory is on FTP server?
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Main_form.FTP_Dir_Hierarchy">
+	<summary>
+ Hierarchy of directories on FTP server. For example, ftp.narod.ru/www/111/222/
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Main_form.Save_model">
+	<summary>
+ This subrutine save model with results to Me.Output_filename
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Main_form.Open_model">
+	<summary>
+ This subrutine reads model from me.Input_filename file
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Main_form.Fill_Step_selector">
+	<summary>
+ Fill Pult.Step_selector with step numbers and times
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.MIP.Inertia_2_node(THORIUM.Vector[]@,System.Double@,System.Double@,THORIUM.Vector@)">
+	<summary>
+ This sub return tensor of inertia for 2-noded element. i.e. CROD, CBAR or CBEAM in element nodes coordinate system, 
+ and its volume and centroid.
+ </summary>
+	<param name="Vertex"></param>
+ Array of element nodes coordinates. It must be in one coordinate system 
+ <remarks></remarks>
+</member><member name="M:THORIUM.MIP.Inertia_4_node(THORIUM.Vector[]@,System.Double@,THORIUM.Vector@,System.Double[0:,0:]@)">
+	<summary>
+ This sub return tensor of inertia for 4-noded element. i.e. CTETRA in element nodes coordinate system, 
+ and its volume and centroid.
+ </summary>
+	<param name="Vertex"></param>
+ Array of element nodes coordinates. It must be in one coordinate system 
+ <remarks></remarks>
+</member><member name="M:THORIUM.MIP.Inertia_6_node(THORIUM.Vector[]@,System.Double@,THORIUM.Vector@)">
+	<summary>
+ This sub return tensor of inertia for 6-noded element. i.e. CPENTA or CTRIA in element nodes coordinate system, 
+ and its volume and centroid.
+ </summary>
+	<param name="Vertex"></param>
+ Array of element nodes coordinates. It must be in one coordinate system 
+ <remarks></remarks>
+</member><member name="M:THORIUM.MIP.Inertia_8_node(THORIUM.Vector[]@,System.Double@,THORIUM.Vector@)">
+	<summary>
+ This function return tensor of inertia for 8-noded element. i.e. CHEXA or CQUAD in element nodes coordinate system, 
+ and its volume and centroid.
+ </summary>
+	<param name="Vertex"></param>
+ Array of element nodes coordinates. It must be in one coordinate system 
+ <remarks></remarks>
+</member><member name="T:THORIUM.MIP">
+	<summary>
+ Mass-inertia properties calculation class
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Tetrahedron.Vertex">
+	<summary>
+ Array of Tetrahedron vertexes
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.FEM">
+	<summary>
+ The finite element model for heat transfer problem.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Argument">
+	<summary>
+ Argument for inside of Solver calculations.
+ Table of parameters (vector-Argument components)
+ 0 - temperature,
+ 1 - time,
+ 2 - random value,
+ 3 - incoming radiation frequency,
+ 4 - incoming radiation angle of elevation in local coordinate system,
+ 5 - incoming radiation azimuth in local coordinate system.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.HT_element">
+	<summary>
+ Array of elements, which can involve in heat transfer.
+ Elements not included in this array are excluded from heat transfer model.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.B_matrix">
+	<summary>
+ Matrix of angle coefficients for elements.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.time">
+	<summary>
+ Time 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.T">
+	<summary>
+ Temperatures (in K) of elements during the solution process
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Q">
+	<summary>
+ Heat load (in W) of elements during the solution process
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Color_codes">
+	<summary>
+ Color codes for all of element faces at all time steps
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Q_R_outcome_vector">
+	<summary>
+ One can obtain outcome radiation power from elements by scalar multiplication of Q_R_outcome_vector and vector of temperatures on given time step
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Start_time">
+	<summary>
+ The solution start time, i.e. heat transfer problem will be solved for time interval from Start_time to Start_time + Lenght_time.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Lenght_time">
+	<summary>
+ The solution finish time, i.e. heat transfer problem will be solved for time interval from Start_time to Start_time + Lenght_time.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Step_time">
+	<summary>
+ The duration of solution time step. 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.K_T_min">
+	<summary>
+ The element's available temperature in case of cooling coefficient 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.K_T_max">
+	<summary>
+ The element's available temperature in case of heating coefficient 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Save_step_time">
+	<summary>
+ The time step for saving data 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Current_time">
+	<summary>
+ Time during solution process. It is changed from step to step
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Resumption">
+	<summary>
+ Should we use input *.model file for the analysis resumption or not?
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Resumption_start_time">
+	<summary>
+ If we should use input *.model file for the analysis resumption, then which moment of time should we use to begin?
+ If Resumption_start_time  = Double.MaxValue then this parameter is not set and we should resume analysis 
+ from the last but one (предпоследний) step.
+ If Resumption_start_time is not Double.MaxValue then we should find step before given Resumption_start_time
+ and we have to begin analysis from this step.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Resumption_length_time">
+	<summary>
+ The solution finish time, i.e. heat transfer problem will be solved for time interval from Resumption_start_time to Resumption_start_time + Resumption_length_time.
+ If Resumption_length_time = Double.MaxValue then this parameter is not set and we should perfome analysis
+ until time set in *.model file.
+ If Resumption_time is not Double.MaxValue then we should perfome analysis until set time
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Calc_T_Epsilon">
+	<summary>
+ Maximum relative error Newton method temperature calculation
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.N_photon">
+	<summary>
+ Number of photons, emitted from face at time of one solution step
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Min_T">
+	<summary>
+ Minimum and maximum temperatures from all of steps, all of elements
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Current_step">
+	<summary>
+ Current step of thermal analysis visualisation. Used only for visualisation.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.Colors_from_entire_solution">
+	<summary>
+ If Colors_from_entire_solution is TRUE, then minimal and maximal temparatures are taken from entire analysis.
+ If Colors_from_entire_solution is FALSE, then minimal and maximal temparatures are taken from current step tempatature distribution.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_solver.MT_RND">
+	<summary>
+ This member  implements the Mersenne Twister (MT), MT19937ar, pseudo-random number generator (PRNG) 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Fill_HT_element">
+	<summary>
+ This sub fill HT_element array with 2D and 3D element.
+ Only these types of elements can involve in heat transfering.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Init_temperature_field">
+	<summary>
+ This sub initialized initial temperature field over all of model and
+ prepare FTOP for processing.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Fill_B_matrices">
+	<summary>
+ This sub fill matrices of angle coefficients for faces of elements and elements.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Fill_B_matrices_TEST">
+	<summary>
+ This sub fill matrices of angle coefficients for faces of elements and elements.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Prepare_heat_transfer(System.Int32@)">
+	<summary>
+ This subrutine prepares array for heat transfer calculation on Step_Number.
+ </summary>
+	<param name="Step_Number"></param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_R_transfer_N_photon_old(System.Int32@,System.Int32@,Visualisation.Visualisation@)">
+	<summary>
+ This sub is used for raduation heat power caclulation on a given step of intergation.
+ The termalotical properties are variable at time of solution process. 
+ </summary>
+	<param name="Step_Number">Temperatures on this step are used for element emission calculation.</param>
+	<param name="N_photon">Numbers of photons emitted from each face on each step of radiation heat transfer calculation</param>
+	<param name="vf">Visualisation form used for radiaion heat transfer calculation.</param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_R_transfer_N_photon(System.Int32@,System.Int32@,Visualisation.Visualisation@)">
+	<summary>
+ This sub is used for raduation heat power caclulation on a given step of intergation.
+ The termalotical properties are variable at time of solution process. 
+ </summary>
+	<param name="Step_Number">Temperatures on this step are used for element emission calculation.</param>
+	<param name="N_photon">Numbers of photons emitted from each face on each step of radiation heat transfer calculation</param>
+	<param name="vf">Visualisation form used for radiaion heat transfer calculation.</param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_R_transfer_N_photon(System.Int64@,System.Int64@,System.Int32@,System.Int32@,Visualisation.Visualisation@)">
+	<summary>
+ !!!! Передалать в соотвествие Calc_R_transfer_N_photon с другим набором аргументов
+ </summary>
+	<param name="N_1">First HT_element number to calculate radiation heat transfer</param>
+	<param name="N_2">Last HT_element number to calculate radiation heat transfer</param>
+	<param name="Step_Number">Temperatures on this step are used for element emission calculation.</param>
+	<param name="N_photon">Numbers of photons emitted from each face on each step of radiation heat transfer calculation</param>
+	<param name="vf">Visualisation form used for radiaion heat transfer calculation.</param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_R_transfer_R_heat_source_N_photon(System.Int32@,Visualisation.Visualisation@)">
+	<summary>
+ This sub calculates heat power from radiation heat source to faces.
+ Each radiation source emits N_photon photons.
+ </summary>
+	<param name="N_photon"></param>
+	<param name="vf"></param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_R_transfer_R_heat_source(Visualisation.Visualisation@)">
+	<summary>
+ This sub calculates heat power from radiation heat source to faces.
+ Each radiation source emits N_photon photons.
+ </summary>
+	<param name="vf"></param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Reset_fases_R_Q">
+	<summary>
+ This sub set incoming and outcoming radiation heat power of all of shinig faces
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Illuminate_model(THORIUM.Vector@,THORIUM.Vector@,System.Double@,THORIUM.DEPEND@,THORIUM.Vector@,THORIUM.MEDIUM1@,Visualisation.Visualisation@,System.Int32@)">
+	<summary>
+ This function illiminate model with photons, emutted from point Source_location,
+ in the line of Direction with Opening_angle.
+ The function returns array of parts of energy absorbed in model's elements.    
+ </summary>
+	<param name="Source_location">Location of radiotion source</param>
+	<param name="Direction">Direction of radiation propagation</param>
+	<param name="Opening_angle">Opening angle in radiation propagation cone
+ If Opening_angle = PI, photons emitted in all of directions, spherically.
+ If Opening_angle = PI/2, photons emitted in one half-space.
+ If Opening_angle more then 0 and less than  PI/2, photons emitted in cone.</param>
+	<param name="CDF">Radiation source cumulative distribution of photon frequency</param>
+	<param name="Argument">Radiation source paratemers, such as a temperature, time and so on.</param>
+	<param name="Emitter_medium">Medium, surrounded radiation source.</param>
+	<param name="vf">Visualisation form, used for photon-face interaction detection</param>
+	<param name="N_photon">Number of photons emitted from source</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Illuminate_model(THORIUM.Face@,THORIUM.Vector@,System.Double@,THORIUM.DEPEND@,THORIUM.Vector@,THORIUM.MEDIUM1@,Visualisation.Visualisation@,System.Int32@)">
+	<summary>
+ This function illiminate model with photons, emutted from point Source_location,
+ in the line of Direction with Opening_angle.
+ The function returns array of parts of energy absorbed in model's elements.    
+ </summary>
+	<param name="Face">Face to emit photons</param>
+	<param name="Direction">Direction of radiation propagation</param>
+	<param name="Opening_angle">Opening angle in radiation propagation cone
+ If Opening_angle = PI, photons emitted in all of directions, spherically.
+ If Opening_angle = PI/2, photons emitted in one half-space.
+ If Opening_angle more then 0 and less than  PI/2, photons emitted in cone.</param>
+	<param name="CDF">Radiation source cumulative distribution of photon frequency</param>
+	<param name="Argument">Radiation source paratemers, such as a temperature, time and so on.</param>
+	<param name="Emitter_medium">Medium, surrounded radiation source.</param>
+	<param name="vf">Visualisation form, used for photon-face interaction detection</param>
+	<param name="N_photon">Number of photons emitted from source</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Illuminate_model_and_calc_radiation_Q(THORIUM.Vector@,THORIUM.Vector@,System.Double@,THORIUM.DEPEND@,THORIUM.Vector@,THORIUM.MEDIUM1@,Visualisation.Visualisation@,System.Int32@,System.Double@)">
+	<summary>
+ This function illiminate model with photons, emutted from point Source_location,
+ in the line of Direction with Opening_angle.
+ The function returns array of energies absorbed in model's elements.    
+ </summary>
+	<param name="Source_location">Location of radiotion source</param>
+	<param name="Direction">Direction of radiation propagation</param>
+	<param name="Opening_angle">Opening angle in radiation propagation cone
+ If Opening_angle = PI, photons emitted in all of directions, spherically.
+ If Opening_angle = PI/2, photons emitted in one half-space.
+ If Opening_angle more then 0 and less than  PI/2, photons emitted in cone.</param>
+	<param name="CDF">Radiation source cumulative distribution of photon frequency</param>
+	<param name="Argument">Radiation source paratemers, such as a temperature, time and so on.</param>
+	<param name="Emitter_medium">Medium, surrounded radiation source.</param>
+	<param name="vf">Visualisation form, used for photon-face interaction detection</param>
+	<param name="N_photon">Number of photons emitted from source</param>
+	<param name="Total_outcoming_heat_power">Total heat power outcoming from source</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Illuminate_model_from_face_and_calc_radiation_Q(THORIUM.Face@,THORIUM.Vector@,System.Double@,THORIUM.DEPEND@,THORIUM.Vector@,THORIUM.MEDIUM1@,Visualisation.Visualisation@,System.Int32@,System.Double@)">
+	<summary>
+ This function calculates illimination of model from given face with photons.
+ The emission center in each act of emission is located randomly on face surface.
+ The photon emission is directed by Direction within Opening_angle.
+ The function returns array of energies absorbed in model's elements.    
+ </summary>
+	<param name="Face">Face to emit photons</param>
+	<param name="Direction">Direction of radiation propagation</param>
+	<param name="Opening_angle">Opening angle in radiation propagation cone
+ If Opening_angle = PI, photons emitted in all of directions, spherically.
+ If Opening_angle = PI/2, photons emitted in one half-space.
+ If Opening_angle more then 0 and less than  PI/2, photons emitted in cone.</param>
+	<param name="CDF">Radiation source cumulative distribution of photon frequency</param>
+	<param name="Argument">Radiation source paratemers, such as a temperature, time and so on.</param>
+	<param name="Emitter_medium">Medium, surrounded radiation source.</param>
+	<param name="vf">Visualisation form, used for photon-face interaction detection</param>
+	<param name="N_photon">Number of photons emitted from source</param>
+	<param name="Total_outcoming_heat_power">Total heat power outcoming from source</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Illuminate_model_and_save_absorbed_power_in_faces(THORIUM.TOP_item@,THORIUM.Vector@,System.Double@,THORIUM.DEPEND@,THORIUM.Vector@,THORIUM.MEDIUM1@,Visualisation.Visualisation@,System.Int32@,System.Double@)">
+	<summary>
+ This sub calculates illimination of model from given face with photons.
+ The emission center in each act of emission is located randomly on face surface.
+ The photon emission is directed by Direction within Opening_angle.
+ The function returns array of energies absorbed in model's elements.    
+ </summary>
+	<param name="Source">Face or radiation source to emit photons</param>
+	<param name="Direction">Direction of radiation propagation</param>
+	<param name="Opening_angle">Opening angle in radiation propagation cone
+ If Opening_angle = PI, photons emitted in all of directions, spherically.
+ If Opening_angle = PI/2, photons emitted in one half-space.
+ If Opening_angle more then 0 and less than  PI/2, photons emitted in cone.</param>
+	<param name="CDF">Radiation source cumulative distribution of photon frequency</param>
+	<param name="Argument">Radiation source paratemers, such as a temperature, time and so on.</param>
+	<param name="Emitter_medium">Medium, surrounded radiation source.</param>
+	<param name="vf">Visualisation form, used for photon-face interaction detection</param>
+	<param name="N_photon">Number of photons emitted from source</param>
+	<param name="Total_outcoming_heat_power">Total heat power outcoming from source</param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Illuminate_model_from_RSOURCE1_and_save_absorbed_power_in_faces(THORIUM.RSOURCE1@,Visualisation.Visualisation@)">
+	<summary>
+ This sub calculates illimination of model from given RSOURCE1 with photons.
+ The photon emission is directed by Direction within Opening_angle.
+ The sub stores power of absorbed photons  in model's faces in elements.    
+ </summary>
+	<param name="R_source">Radiation source to emit photons</param>
+	<param name="vf">Visualisation form, used for photon-face interaction detection</param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.B_matrix_element(System.Int64,System.Int64)">
+	<summary>
+ This function returns one element of radiation heat transfer matrix with indexes (i,j)
+ </summary>
+	<param name="i"></param>
+	<param name="j"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Fill_HT_element_argument(THORIUM.HT_Element@)">
+	<summary>
+ This sub calculates vector-argument for a heat transferring element.
+ Table of parameters (vector-Argument components)
+ 0 - temperature,
+ 1 - time,
+ 2 - random value,
+ 3 - incoming radiation frequency,
+ 4 - incoming radiation angle of elevation in local coordinate system,
+ 5 - incoming radiation azimuth in local coordinate system.
+ </summary>
+	<param name="HT_element"></param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Fill_Face_argument(THORIUM.Face@,THORIUM.Photon@)">
+	<summary>
+ This sub calculates vector-argument for a face.
+ Table of parameters (vector-Argument components)
+ 0 - temperature,
+ 1 - time,
+ 2 - random value,
+ 3 - incoming radiation frequency,
+ 4 - incoming radiation angle of elevation in local coordinate system,
+ 5 - incoming radiation azimuth in local coordinate system.
+ </summary>
+	<param name="Face">Interacting face</param>
+	<param name="in_Photon">Incoming photon</param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Fill_RSOURCE_argument(THORIUM.RSOURCE1@)">
+	<summary>
+ This sub calculates vector-argument for a radiation heat source.
+ Table of parameters (vector-Argument components)
+ 0 - temperature,
+ 1 - time,
+ 2 - random value,
+ 3 - incoming radiation frequency,
+ 4 - incoming radiation angle of elevation in local coordinate system,
+ 5 - incoming radiation azimuth in local coordinate system.
+ </summary>
+	<param name="RSOURCE">Interacting face</param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Fill_HSOURCE_argument(THORIUM.HSOURCE1@)">
+	<summary>
+ This sub calculates vector-argument for a heat source.
+ Table of parameters (vector-Argument components)
+ 0 - temperature,
+ 1 - time,
+ 2 - random value,
+ 3 - incoming radiation frequency,
+ 4 - incoming radiation angle of elevation in local coordinate system,
+ 5 - incoming radiation azimuth in local coordinate system.
+ </summary>
+	<param name="HSOURCE">Interacting face</param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_Q_TP_C_TO_C_BC_V_RS_C(System.Object@,System.Object@)">
+	<summary>
+ This function calculates incoming heat (in W) for given element number n_Element on given step n_Step.
+ The assumptions are: 1. Constant thermophysics. 2. Constant thermooptics
+ 3. Variable boundary conditions 4. Fixed radiation heat sources.
+ </summary>
+	<param name="n_Element">Element to calculate incoming heat</param>
+	<param name="n_Step">Time step to calculate incoming heat</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_Q_TP_C_TO_C_BC_V_RS_C_TEST(System.Object@,System.Object@)">
+	<summary>
+ This function calculates incoming heat (in W) for given element number n_Element on given step n_Step.
+ The assumptions are: 1. Constant thermophysics. 2. Constant thermooptics
+ 3. Variable boundary conditions 4. Fixed radiation heat sources.
+ </summary>
+	<param name="n_Element">Element to calculate incoming heat</param>
+	<param name="n_Step">Time step to calculate incoming heat</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_Q_thermophysics_const_thermooptics_const_boundary_conditions_const(System.Object@,System.Object@)">
+	<summary>
+ This function calculates incoming heat (in W) for given element number n_Element on given step n_Step
+ </summary>
+	<param name="n_Element">Element to calculate incoming heat</param>
+	<param name="n_Step">Time step to calculate incoming heat</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_Q_thermophysics_const_thermooptics_const_boundary_conditions_NOT_const(System.Object@,System.Object@)">
+	<summary>
+ This function calculates incoming heat (in W) for given element number n_Element on given step n_Step.
+ !!! Raduation sources arguments SHOLULD BE calculated before calling this function !!!
+ </summary>
+	<param name="n_Element">Element to calculate incoming heat</param>
+	<param name="n_Step">Time step to calculate incoming heat</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_Q_const(THORIUM.HT_Element@)">
+	<summary>
+ This sub calculate total thermal power to element ( if power to element - it is &gt;0)
+ </summary>
+	<param name="HT_element"></param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_Q_Radiation_const_Conductivity_const(THORIUM.HT_Element@)">
+	<summary>
+ This sub calculate total thermal power to element ( if power to element - it is &gt;0)
+ </summary>
+	<param name="HT_element"></param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Solve_problem">
+	<summary>
+ This subroutine solves problem, using stated solver.
+ Also, subrutine selects depends element properties on temperature or not and choose appropriate type of solver,
+ variable or constant.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Resume_problem">
+	<summary>
+ This subroutine resumes solution of the problem, using stated solver.
+ The resumption of the problem begins from the stated moment of time.
+ If moment of time is not stated then resumption begins from the next to last (предыдущий) step.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_productivity_index(Visualisation.Visualisation@)">
+	<summary>
+ This function calculates productivity index - the time needed for one step of heat transfer
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_T(THORIUM.HT_Element@,System.Double@,System.Double@,System.Double@)">
+	<summary>
+ This function calcutates temperature for next iteration 
+ </summary>
+	<param name="HT_element"></param>
+	<param name="T_i">Current element temperature</param>
+	<param name="T_minus_i">Element temperature from previous step</param>
+	<param name="F">Right part of equation</param>
+	<returns>
+	</returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Euler_const_time_step_TP_C_TO_C_BC_V_RS_V">
+	<summary>
+ This sub solve problem using simple Euler integration method. The assumptions are: 1. Constant time step. 2. Constant thermophysics. 3. Constant thermooptics 4. Variable boundary conditions 5. Movable radiation heat sources.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Euler_const_time_step_TP_C_TO_C_BC_C_RS_C">
+	<summary>
+ This sub solve problem using simple Euler integration method. The assumptions are: 1. Constant time step. 2. Constant thermophysics. 3. Constant thermooptics 4. Constant boundary conditions 5. Fixed radiation heat sources.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Euler_const_time_step_TP_C_TO_C_BC_V_RS_C">
+	<summary>
+ This sub solve problem using simple Euler integration method.
+ The assumptions are: 1. Constant time step. 2. Constant thermophysics. 3. Constant thermooptics
+ 4. Variable boundary conditions 5. Fixed radiation heat sources.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Euler_var_T_step_with_smoothing_MATRIXLESS(System.Int32@)">
+	<summary>
+ This sub solve problem using simple Euler integration method with variable time step.
+ Radiation heat transfer matrix is not used for this method.
+ </summary>
+	<param name="N_step_start">Step to begin analysis. Can be skipped to set default step =1.
+ If N_step_start is set, the analysis begins from this step.</param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Euler_var_time_step_TP_C_TO_C_BC_V_RS_C">
+	<summary>
+ This sub solve problem using simple Euler integration method with variable time step.
+ This method uses radiation transfer matrix.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Euler_var_time_step_TP_C_TO_C_BC_V_RS_C_TEST">
+	<summary>
+ This sub solve problem using simple Euler integration method with variable time step.
+ This method uses radiation transfer matrix.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Linear_smoothing(System.Double@,System.Double[]@,System.Double[]@)">
+	<summary>
+ This function realized 2D linear smoothing
+ </summary>
+	<param name="x">argument to calculate Y</param>
+	<param name="X_raw">unsmoothed raw X data </param>
+	<param name="Y_raw">unsmoothed raw Y data</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.N_th_order_smoothing(System.Double@,System.Int32@,System.Double[]@,System.Double[]@)">
+	<summary>
+ This function realized 2D N-th order smoothing
+ </summary>
+	<param name="x">argument to calculate Y</param>
+	<param name="N ">order of smoothing</param>
+	<param name="X_raw">unsmoothed raw X data </param>
+	<param name="Y_raw">unsmoothed raw Y data</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Detect_part_of_model_for_clients(System.Double[]@)">
+	<summary>
+ This function calculated part of model to calculate for every client according to it's productivity index 
+ </summary>
+	<param name="P_index">Array productivity indexes</param>
+	<returns>Array of part for clients</returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Calc_Elements_Faces_codes">
+	<summary>
+ This sub calculates element's face codes, with taking in to account element's temperature.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Detect_Min_Max_T">
+	<summary>
+ Процедура определяет минимальную и максимальную температуры за весь расчет.
+ Заполняет поля Min_T и Max_T
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Detect_Min_Max_T_on_current_step">
+	<summary>
+ Процедура определяет минимальную и максимальную температуры на текущем шаге.
+ Заполняет поля Min_T и Max_T
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Field_color(System.Double,System.Double,System.Double)">
+	<summary>
+ This function return faces' color code which describes field's value, taking in consideration fields's minimum and maximum field's values
+ </summary>
+	<param name="Value">Field's value. Color codes is calculated for this value.</param>
+	<param name="Min_Value">Field's minimum value.</param>
+	<param name="Max_Value">Field's maximum value.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Field_color_old(System.Double,System.Double,System.Double)">
+	<summary>
+ This function return faces' color code which describes field's value, taking in consideration fields's minimum and maximum field's values
+ </summary>
+	<param name="Value">Field's value. Color codes is calculated for this value.</param>
+	<param name="Min_Value">Field's minimum value.</param>
+	<param name="Max_Value">Field's maximum value.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_solver.Decimate_results(System.Int32@)">
+	<summary>
+ This sub go trow results and leaves only 0..N..2N..3N results item.
+ It can be used for results file decrease.
+ Процедура прореживает результаты, оставляя каждый N-й. 
+ </summary>
+	<param name="N"></param>
+	<remarks></remarks>
+</member><member name="T:THORIUM.TOP_solver">
+	<summary>
+ This class solves system of heat transfer equations for specifed period of time with defined time step.
+ It saves temperature and inocming heat power vectors for all of step.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HT_Element.Element">
+	<summary>
+ FEM element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HT_Element.Mass">
+	<summary>
+ Mass of the element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HT_Element.c">
+	<summary>
+ Specific heat capacity of elements
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HT_Element.T_0">
+	<summary>
+ Initial temperature of element before analysis
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HT_Element.Face">
+	<summary>
+ Shining faces of heat transfer element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HT_Element.Heat_conductivity">
+	<summary>
+ Array of element's conductivity heat transfer paths.
+ For example, if element has 4 neighbours, 
+ then Heat_conductivity array for this element will fill with 4 items.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HT_Element.Heat_radiation">
+	<summary>
+ Array of element's radiation heat transfer paths.
+ For example, if element absorbs radiation from 4 elements, 
+ then Heat_radiation array for this element will fill with 4 items.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HT_Element.Heat_source">
+	<summary>
+ Array of heat sources, heating element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HT_Element.Radiation_source">
+	<summary>
+ Array of radiation sources, heating element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HT_Element.T_SET">
+	<summary>
+ T_SET, setted the element's temperature
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HT_Element.Q_summary">
+	<summary>
+ Full heat to/from element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HT_Element.Argument">
+	<summary>
+ Table of parameters (vector-Argument components)
+ 0 - temperature,
+ 1 - time,
+ 2 - random value,
+ 3 - incoming radiation wavelenght
+ 4 - incoming radiation angle of elevation in local coordinate system
+ 5 - incoming radiation azimuth in local coordinate system
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.HT_Element">
+	<summary>
+ Heat transfer element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Heat_conductivity.HT_Element">
+	<summary>
+ The element, that involve in heat transfering
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Heat_conductivity.n_HT_Element">
+	<summary>
+ The number of element, that involve in heat transfering
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Heat_conductivity.Area_1">
+	<summary>
+ The area of this element for transfer heat to boundary 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Heat_conductivity.Area_2">
+	<summary>
+ The area of neighbouring element to boundary 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Heat_conductivity.Distance_1">
+	<summary>
+ The distance from this element to boundary 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Heat_conductivity.Distance_2">
+	<summary>
+ The distance from boundary to neighbouring element
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Heat_conductivity.Conductivity">
+	<summary>
+ Conductivity between connected elements, W/K
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Heat_radiation.n_Emitter_HT_Element">
+	<summary>
+ The number of element, that involve in heat transfering
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Heat_radiation.Coefficient">
+	<summary>
+ Coefficient Conductivity between connected elements, W/K
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.Heat_radiation">
+	<summary>
+ This class describes radiation heat transfer link between two elements.
+ It was done to replace B_matrix of radiation exchange factors.
+ The element, that absorbs radiation is own the Heat_radiation entity.
+ The element, that emit radiation 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_item.Name">
+	<summary>
+ Name of model item. The number identification usually used, but in some reasons name can be more useful.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_item.Type">
+	<summary>
+ Type of model item. For instance, type can be used for subdividing materials to MAT1, MAT2, MAT8 and etc.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_item.Number">
+	<summary>
+ Number of model item. The common used identificator.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_item.String_in_file">
+	<summary>
+ The string, which represent model item in file.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_item.Fields_array">
+	<summary>
+ Array of fields, which represent model item in file.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_item.Enabled">
+	<summary>
+ Is model item used or not?
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_item.Children">
+	<summary>
+ Model itemes, which were created with this model item
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_item.h">
+	<summary>
+ Plank constant
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_item.c">
+	<summary>
+ Speed of light
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_item.k">
+	<summary>
+ Boltzmann constant
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_item.sigma">
+	<summary>
+ Stefan-Boltzmann law constant
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.TOP_item.v_max_const">
+	<summary>
+ This constant is used for maximum emittance of black body frequency (v_max) calculation.
+ v_max = v_max_const*T
+ For example, for T=100  v_max = v_max_const*100 = 5.878E+12
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_item.Load">
+	<summary>
+ Sub can be used for uploading model item fields from array which represent model item in file.
+ String_in_file field used as an information source.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_item.Prepare_Save">
+	<summary>
+ Sub can be used for preparing array of model item fields.
+ Fields used as an information source.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_item.Save">
+	<summary>
+ Sub can be used for downloading model item fields to string which represent model item in file.
+ String_in_file field used as an information destination.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_item.Convert_string_in_file_to_array_1(System.String@)">
+	<summary>
+ Function for conversion element in file representation string to array of element's fields
+ </summary>
+	<param name="in_String">Element in file representation string</param>
+	<returns>Array of element's fields</returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_item.Convert_string_in_file_to_array_2(System.String@)">
+	<summary>
+ Function for conversion element in file representation string to array of element's fields
+ </summary>
+	<param name="in_String">Element in file representation string</param>
+	<returns>Array of element's fields</returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.TOP_item.Convert_string_in_file_to_array_3(System.String@)">
+	<summary>
+ Function for conversion element in file representation string to array of element's fields
+ </summary>
+	<param name="in_String">Element in file representation string</param>
+	<returns>Array of element's fields</returns>
+	<remarks></remarks>
+</member><member name="T:THORIUM.TOP_item">
+	<summary>
+ FEM any object (i.e. any finite element, coordinate system, material, property or something else)
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.DEPEND.Base">
+	<summary>
+ If any component of the Aggument vector is equal to zero in all of DEPEND Points,
+ then this component should be excluded from distance calculation.
+ For example, if value do not depends on time then Base(1)=0,
+ if value do not depends on temperature then Base(0)=0, and so on.
+ If value DEPENDS on some component, the Base(i)=1/(Component_max_value - Component_min_value)^2,
+ where
+ Component_max_value - the largest component value in all of given points,
+ Component_min_value - the smallest component value in all of given points.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.DEPEND.n">
+	<summary>
+ This coefficient is used in inverce distance (ID) calculation: ID = 1/(L)^n,
+ where L is distance from tabulated point to given point.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.DEPEND.Return_value(THORIUM.Vector@)">
+	<summary>
+ This functon return interpolated value of dependency, using inverse distance method with bases
+ Возвращает значение функции, заданной множеством точек, используя метод обратного расстояния,
+ при этом расстояние между точками вычислеятся с учетом размаха переменной.
+ Например, функция зависит от времени и от скорости и определена на интервалах [0 сек,1 сек] и [ 1 км/с , 10 км/с ]
+ Расстояние между точками вычисляется как L = math.sqrt( ( (t - t_i)/ (1 сек) )^2  + ((v - v_i)/(9 км/c))^2 )
+ Весовой коэффициент вычисляется как (1/(L + 1.0E-30))^n
+ </summary>
+	<param name="Argument"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:THORIUM.DEPEND">
+	<summary>
+ This class is for dependencies definition, i.e. reflectance from radiation wavelength and from temperature,
+ or heat flux vector from radii-vector and etc.
+ Items can depends on 6 parameters, compacted in 1 vector-Argument.
+ Table of parameters (vector-Argument components)
+ 0 - temperature,
+ 1 - time,
+ 2 - random value,
+ 3 - incoming radiation frequency,
+ 4 - incoming radiation angle of elevation in local coordinate system,
+ 5 - incoming radiation azimuth in local coordinate system.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.FTOP.R_dif">
+	<summary>
+ Diffuse reflectance
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.FTOP.R_mir">
+	<summary>
+ Mirror reflectance
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.FTOP.A">
+	<summary>
+ Absorbtance
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.FTOP.D">
+	<summary>
+ Transmittance
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.FTOP.Eps">
+	<summary>
+ Emissivity. Степень черноты.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.FTOP.CDF">
+	<summary>
+ Cumulative distribution of photon frequency. Photons' spectrum calcalated on a basis of CDF.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.FTOP.T_eff">
+	<summary>
+ Face effective temperature
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.FTOP.Integral_Eps_DEPEND">
+	<summary>
+ The integral emissivity.
+ The emissivity can depends on frequency of radiation, but output overal radiation flux do not depends on it.
+ So, we should integrate emissivity from zero frequency to infinity to gain integral emissivity 
+ for whole frequency band.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.FTOP.Integral_A_DEPEND">
+	<summary>
+ The integral absorbtivity.
+ The absorbtivity can depends on frequency of radiation, but output overal absorbted radiation flux do not depends on it.
+ So, we should integrate absobtivity from zero frequency to infinity to gain integral absorbtivity 
+ for whole frequency band.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.FTOP.Calc_A(THORIUM.Vector@)">
+	<summary>
+ This function calculates absorbtion coefficient for a given Argument
+ </summary>
+	<param name="Argument">Given Argument</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.FTOP.Calc_intergal_Eps(THORIUM.Vector@)">
+	<summary>
+ This function calculates integral emissivity for a given Argument.
+ The emissivity can depends on frequency of radiation, but output overal radiation flux do not depends on it.
+ So, we should integrate emissivity from zero frequency to infinity to gain integral emissivity 
+ for whole frequency band.
+ </summary>
+	<param name="Argument">Given Argument</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.FTOP.Calc_intergal_A(THORIUM.Vector@)">
+	<summary>
+ The integral absorbtivity.
+ The absorbtivity can depends on frequency of radiation, but output overal absorbted radiation flux do not depends on it.
+ So, we should integrate absobtivity from zero frequency to infinity to gain integral absorbtivity 
+ for whole frequency band.
+ </summary>
+	<param name="Argument">Given Argument</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.FTOP.Calc_Integral_Eps_DEPEND">
+	<summary>
+ This sub calculates integral emissivity values for temperature and time in initial Eps dependency.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.FTOP.Calc_Integral_A_DEPEND">
+	<summary>
+ This sub calculates integral absorbtion values for temperature and time 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.FTOP.Calc_Integral_DEPEND(THORIUM.DEPEND@,System.Double@)">
+	<summary>
+ This sub calculates integral of any DEPEND along incoming photon frequency
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.FTOP.Calc_integral_Eps_Point(THORIUM.Vector)">
+	<summary>
+ This function returns value in a point of integral Eps DEPEND.
+ For a given temperture Arg.Coord(0) and time Arg.Coord(1) function integrates Eps dependency 
+ over frequency Arg.Coord(3) from 0 Hz to automatically selected value Hz.
+ The assumption. The face with given Eps emitts like black body.
+ The simple Euler integrator is used. 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.FTOP.Calc_integral_Point(THORIUM.Vector,THORIUM.DEPEND@)">
+	<summary>
+ This function returns value in a point of integral DEPEND.
+ For a given temperture Arg.Coord(0) and time Arg.Coord(1) function integrates DEPEND dependency 
+ over frequency Arg.Coord(3) from 0 Hz to automatically selected value Hz.
+ The assumption. The face with given Eps emitts like black body.
+ The simple Euler integrator is used. 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:THORIUM.FTOP">
+	<summary>
+ This class is for face's thermal-optical properties definition
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.MEDIUM1.Calc_n(THORIUM.Vector@)">
+	<summary>
+ This function calculates refraction factor from incoming photon
+ </summary>
+	<param name="Argument"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.MEDIUM1.Calc_k(THORIUM.Vector@)">
+	<summary>
+  This function calculates depletion factor from incoming photon
+ </summary>
+	<param name="Argument"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.MEDIUM1.Calc_lambda(THORIUM.Vector@)">
+	<summary>
+ This function calculates thermal conductivity
+ </summary>
+	<param name="Argument"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.MEDIUM1.Calc_c(THORIUM.Vector@)">
+	<summary>
+ This function calculates specific heat capacity
+ </summary>
+	<param name="Argument"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:THORIUM.MEDIUM1">
+	<summary>
+ This class for isotropic element's thermal-optical properties determination
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.RSOURCE1.X">
+	<summary>
+ Radiation heat source coordinates in global coordinate system
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.RSOURCE1.POS">
+	<summary>
+ Radiation heat source position in global coordinate system
+ Used for moving radiation source
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.RSOURCE1.Q">
+	<summary>
+ Radiation heat source emissive power
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.RSOURCE1.T">
+	<summary>
+ Radiation heat source temperature
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.RSOURCE1.CDF">
+	<summary>
+ Radiation heat source cumulative distribution of photon frequency
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.RSOURCE1.Emitter_Medium">
+	<summary>
+ The medium, there source is located
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.RSOURCE1.N_photon">
+	<summary>
+ Number of photons, emitted from radiation source at time of one solution step
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.RSOURCE1.Argument">
+	<summary>
+ Table of parameters (vector-Argument components)
+ 0 - temperature,
+ 1 - time,
+ 2 - random value,
+ 3 - incoming radiation wavelenght
+ 4 - incoming radiation angle of elevation in local coordinate system
+ 5 - incoming radiation azimuth in local coordinate system
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.RSOURCE1.B_row">
+	<summary>
+ Parts of source energy absorbed by model's elements
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.RSOURCE1.Current_position">
+	<summary>
+ Radiation heat source current position
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.RSOURCE1.Calc_Q(THORIUM.Vector@)">
+	<summary>
+ This function return current radiation power
+ </summary>
+	<param name="Argument"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.RSOURCE1.Calc_Q">
+	<summary>
+ This function return current radiation power
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.RSOURCE1.Calc_position(THORIUM.Vector@)">
+	<summary>
+ This function return current radiation heat source position
+ </summary>
+	<param name="Argument"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.RSOURCE1.Calc_T(THORIUM.Vector@)">
+	<summary>
+ This function return current radiation heat source temperature
+ </summary>
+	<param name="Argument"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:THORIUM.RSOURCE1">
+	<summary>
+ This class is for radiation sources definition
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HSOURCE1.Q">
+	<summary>
+ Heat source power. Can be positive or negative
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HSOURCE1.Element">
+	<summary>
+ Heat source's elements. Heat source consists of these elements.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HSOURCE1.N_elements">
+	<summary>
+ Number of elements, heat source consist of.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.HSOURCE1.Argument">
+	<summary>
+ Table of parameters (vector-Argument components)
+ 0 - temperature,
+ 1 - time,
+ 2 - random value,
+ 3 - incoming radiation wavelenght
+ 4 - incoming radiation angle of elevation in local coordinate system
+ 5 - incoming radiation azimuth in local coordinate system
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.HSOURCE1.Heat(THORIUM.Vector@)">
+	<summary>
+ This function returns quatinty of heat, emitted by heat source.
+ </summary>
+	<param name="Argument">Parameters heat source of depends on.
+ Table of parameters (sensor components)
+ 0 - temperature,
+ 1 - time,
+ 2 - random value,
+ 3 - incoming radiation wavelenght
+ 4 - incoming radiation angle of elevation in local coordinate system
+ 5 - incoming radiation azimuth in local coordinate system</param>
+	<returns>Quatinty of heat</returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.HSOURCE1.Heat">
+	<summary>
+ This function returns quatinty of heat, emitted by heat source.
+ </summary>
+	<returns>Quatinty of heat</returns>
+	<remarks></remarks>
+</member><member name="T:THORIUM.HSOURCE1">
+	<summary>
+ This class is for heat sources definition
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.T_INIT.Element">
+	<summary>
+ Initial temperature fields elements. Temperature field defined on these elements. 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.T_INIT.Temp">
+	<summary>
+ Temperatures of elements.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.T_INIT">
+	<summary>
+ This class is for initial temperature field definition
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.T_SET.Element">
+	<summary>
+ Initial temperature fields elements. Temperature field defined on these elements. 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.T_SET.Temp">
+	<summary>
+ Temperatures of elements. Can be Double or DEPEND.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.T_SET">
+	<summary>
+ This class is for temperature field definition during the analysis sequence
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Face_photon_interaction.N_R_dif">
+	<summary>
+ Number of photons, diffuselly reflected
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Face_photon_interaction.N_R_mir">
+	<summary>
+ Number of photons, mirrorly reflected
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Face_photon_interaction.N_A">
+	<summary>
+ Number of absorpted photons
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Face_photon_interaction.N_D">
+	<summary>
+ Number of transmitted photons
+ </summary>
+	<remarks></remarks>
+</member><member name="T:THORIUM.Face_photon_interaction">
+	<summary>
+ This class collect information about face-photon interaction
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Photon.Direction">
+	<summary>
+ Normalized vector of photon propagation direction 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Photon.Frequency">
+	<summary>
+ Photon frequency
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Photon.Depletion">
+	<summary>
+ Photon depletion due to propogation through medium
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Photon.Center">
+	<summary>
+ The point, where photon was emitted or reflected or passed by.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Photon.Medium">
+	<summary>
+ The medium, there propagation occuring now
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Photon.Power">
+	<summary>
+ The photon power
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Photon.Emit_random_photon(THORIUM.Vector@,System.Double@,THORIUM.DEPEND@,THORIUM.Vector@)">
+	<summary>
+ This function return photon with random direction and random wavelength.
+ </summary>
+	<param name="Source_location">The location of radiation source</param>
+	<param name="Emission_angle">Opening angle in emission cone.
+ If Emission_angle = PI, photons emitted in all of directions, spherically.
+ If Emission_angle = PI/2, photons emitted in one half-space.
+ If Emission_angle more then 0 and less than  PI/2, photons emitted in cone.</param>
+	<param name="CDF"></param>
+	<param name="Argument"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Photon.Draw_spectrum(THORIUM.Photon[]@,System.Double@,System.Int32@)">
+	<summary>
+	</summary>
+	<param name="Photon">Набор фотонов для построение спектра</param>
+	<param name="T">Температура излучателя</param>
+	<param name="N_bands">Количество диапазонов, в которых суммируется мощность</param>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Photon.Random_photon_frequency(System.Double@)">
+	<summary>
+ This function return frequency of photon, emitted from absolute black body with set temperature
+ </summary>
+	<param name="Temperature">The temperature of body</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Photon.Random_photon_frequency(THORIUM.DEPEND@,THORIUM.Vector@)">
+	<summary>
+ This function return frequency of photon, emitted from body with set CDF, temperature and in set moment of time.
+ WARNING!!! CDF must be function of frequency for random value. Not like in absolute black body frequency calculation.
+ </summary>
+	<param name="CDF">The cumulative distibution function for body radiation frequency</param>
+	<param name="Argument">The vector-argument for frequency dependency calculation</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Photon.Planck_CDF(System.Double@,System.Double@)">
+	<summary>
+ This function return cumulative distribution of photon frequency depending of photon's frequency and body temperature
+ </summary>
+	<param name="v">photon frequency</param>
+	<param name="T">body temperature</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Photon.Planck_CDF_der(System.Double@,System.Double@)">
+	<summary>
+ This function return first derivative of cumulative distribution of photon frequency depending of photon's frequency and body temperature
+ </summary>
+	<param name="v">photon frequency</param>
+	<param name="T">body temperature</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:THORIUM.Photon">
+	<summary>
+ Bundle of photons with same wavelength and same propagation direction
+ It can be used, for example, for Monte-Carlo calculation of radiation heat transfer angle coefficient matrix
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Face.Argument">
+	<summary>
+ Table of parameters (vector-Argument components)
+ 0 - temperature,
+ 1 - time,
+ 2 - random value,
+ 3 - incoming radiation wavelenght
+ 4 - incoming radiation angle of elevation in local coordinate system
+ 5 - incoming radiation azimuth in local coordinate system
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Face.TOP_Epsilon">
+	<summary>
+ Точность расчетов
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Face.Q_R_outcome">
+	<summary>
+ Heat power emitted from face
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Face.Q_R_income">
+	<summary>
+ Heat power hit the face
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Face.Q_R_absorbed">
+	<summary>
+ Heat power absorbed by face
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Face.Q_R_diffuse_reflected">
+	<summary>
+ Heat power diffuse reflected by face
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Face.Q_R_mirror_reflected">
+	<summary>
+ Heat power mirror reflected by face
+ </summary>
+	<remarks></remarks>
+</member><member name="F:THORIUM.Face.Q_R_transmitted">
+	<summary>
+ Heat power transmitted by face
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Face.op_Like(THORIUM.Face,THORIUM.Face)">
+	<summary>
+ Are faces equal or not?
+ </summary>
+	<param name="A"></param>
+	<param name="B"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Face.Transform_to_face(THORIUM.Vector)">
+	<summary>
+ Function transform vector from global coordinate system to face's coordinate system
+ </summary>
+	<param name="in_Vector"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Face.Transform_from_face(THORIUM.Vector)">
+	<summary>
+ Function transform vector from face's coordinate system to global coordinate system
+ </summary>
+	<param name="in_Vector"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Face.Face_photon_interaction(THORIUM.Photon@)">
+	<summary>
+ This function is for determination incoming photon (incoming to face).
+ The photon can be reflected (mirrorly and diffuselly), transmitted or absorbed.
+ If photon absorbed, then function returs Nothing, else return photon.
+ </summary>
+	<param name="in_Photon"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Face.Transmission(THORIUM.Photon@,System.Object@,System.Object@,System.Double@)">
+	<summary>
+ This function return mirrorly transmitted photon, taking into account total reflection
+ </summary>
+	<param name="in_Photon"> Incoming photon</param>
+	<param name="Medium_1">Medium from incoming side</param>
+	<param name="Medium_2">Medium from outcoming side</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Face.Transmission_flat(THORIUM.Photon@)">
+	<summary>
+ This function return photon, mirrorly transmitted from flat element's face 
+ </summary>
+	<param name="in_Photon"> Incoming photon</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Face.Calc_local_coordinates">
+	<summary>
+ This subroutine caclulates face's grids coordinates in face's coordinate system and detects lower and upper bounds of X- and Y-coordinates of grids.  
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Face.Calc_random_emission_center">
+	<summary>
+ This function returns emission center coordinates ramdomly located on face surface
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Face.IsPointInPolygon(System.Double@,System.Double@,System.Double[]@,System.Double[]@)">
+	<summary>
+ This function return is point with coordinates (x,y) lies in polygon (convex or not), given by array of its 
+ vertex coordinates, or not lies.
+ </summary>
+	<param name="x">X coordinate of investigated point</param>
+	<param name="y">Y coordinate of investigated point</param>
+	<returns>Is point with coordinates (x,y) lies in polygon (convex or not), given by array of its 
+ vertex coordinates or not lies.</returns>
+	<remarks></remarks>
+</member><member name="T:THORIUM.Face">
+	<summary>
+ The face of finite element. It can be tree of four-grided. 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Vector.op_Multiply(THORIUM.Vector,THORIUM.Vector)">
+	<summary>
+ Vectors scalar product
+ </summary>
+	<param name="A"></param>
+	<param name="B"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Vector.op_Multiply(System.Double,THORIUM.Vector)">
+	<summary>
+ Multiply vector A to number k
+ </summary>
+	<param name="k"></param>
+	<param name="A"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Vector.op_Like(THORIUM.Vector,THORIUM.Vector)">
+	<summary>
+ Are vectors equal or not?
+ </summary>
+	<param name="A"></param>
+	<param name="B"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:THORIUM.Vector.op_Exponent(THORIUM.Vector,THORIUM.Vector)">
+	<summary>
+ Vector A and vector B vector product
+ </summary>
+	<param name="A"></param>
+	<param name="B"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:THORIUM.My.Resources.Resources.ResourceManager">
+	<summary>
+  Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+</summary>
+</member><member name="P:THORIUM.My.Resources.Resources.Culture">
+	<summary>
+  Перезаписывает свойство CurrentUICulture текущего потока для всех
+  обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+</summary>
+</member><member name="T:THORIUM.My.Resources.Resources">
+	<summary>
+  Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+</summary>
+</member>
+</members>
+</doc>

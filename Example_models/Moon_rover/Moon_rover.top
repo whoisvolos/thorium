@@ -1,0 +1,187 @@
+
+G_MEDIUM       2
+
+
+
+$ ECOM-1
+$ FTOP  Number	R_dif	R_ref	A	D	CDF/Eps
+FTOP    1       0.76    0.0     0.24    0.0     0.85 
+
+$ Black paint
+$ FTOP  Number	R_dif	R_ref	A	D	CDF/Eps
+FTOP    2       0.05    0.0     0.95    0.0     0.95
+
+$ Moon surface
+$ FTOP  Number	R_dif	R_ref	A	D	CDF/Eps
+FTOP    10001   0.12    0.0     0.88    0.0     0.88
+
+$ Sun battery surface
+$ FTOP  Number	R_dif	R_ref	A	D	CDF/Eps
+FTOP    20001   0.05    0.0     0.95    0.0     0.95
+
+$ Polished surface
+$ FTOP  Number	R_dif	R_ref	A	D	CDF/Eps
+FTOP    30001   0.99    0.0     0.01    0.0     0.01 
+
+
+$ Òð-ÑÎ-1 surface
+$ FTOP  Number	R_dif	R_ref	A	D	CDF/Eps
+FTOP    12      0.8     0.0     0.2     0.0     0.86
+
+
+
+$Medium Number	n	k	lambda	c
+	
+$ Lunokhod case. Aluminum Ä16
+MEDIUM1 1       1.1     1E-5    110.    900.
+        12      12      1       1       1       1
+
+
+$ Wheels. Aluminum Ä16
+MEDIUM1 30001   1.1     1E-5    110.    900.
+        12      12      1       1       1       1
+
+$ Wheels. Aluminum Ä16
+MEDIUM1 30002   1.1     1E-5    110.    900.
+        12      12      1       1       1       1
+
+
+$ Moon surface
+MEDIUM1 10001   1.1     1E-5    1.E-10  1.E+10
+        10001   10001   10001   10001   10001   10001
+
+
+$ Sun battery. Aluminum Ä16
+MEDIUM1 20001   1.1     1E-5    110.    900.
+        20001   30001   1       1       1       1
+
+
+$ Space
+MEDIUM1 2       1.0     0.0     0.0     0.0
+        1       1       1       1       1       1
+
+
+
+$ Initial temperature of everything
+T_ALL   1       325.
+
+$ Constant moon temperature
+T_SET   1
+        10001   325.
+        31109   325.
+        31110   325.
+        32109   325.
+        32110   325.
+        33109   325.
+        33110   325.
+        34109   325.
+        34110   325.
+
+$ Thermal generation in case
+HSOURCE1 1      1
+        1       2       3       4       5       6
+        51      52
+
+$ Thermal generation in wheels
+HSOURCE1 2      2
+        31302   32302   33302    34302
+$ Thermal generation in case. Dependency
+DEPEND  1       10.
+        0.      0.
+        12.5                                                               
+        0.      1000.
+        12.5   
+        0.      2000.
+        12.5
+        0.      3000.
+        12.5  
+        0.      4000.
+        12.5 
+        0.      5000.
+        12.5 
+        0.      6000.
+        12.5  
+        0.      7000.
+        12.5
+        0.      7100.
+        12.5   
+        0.      7199.
+        12.5                                                           
+        0.      7200.                              
+        40.0
+        0.      7300.                              
+        40.0  
+        0.      7400.                              
+        40.0 
+        0.      7500.                              
+        40.0 
+        0.      7600.                              
+        40.0                             
+        0.      8000.                              
+        40.0  
+        0.      9000.                              
+        40.0   
+        0.      10000.                              
+        40.0  
+        0.      11000.                              
+        40.0 
+        0.      12000.                              
+        40.0 
+        0.      13000.                              
+        40.0 
+        0.      14000.                              
+        40.0                 
+
+$ Thermal generation in wheels.Dependency
+DEPEND  2       10.
+        0.      0.
+        12.5                                                               
+        0.      1000.
+        12.5   
+        0.      2000.
+        12.5
+        0.      3000.
+        12.5  
+        0.      4000.
+        12.5 
+        0.      5000.
+        12.5 
+        0.      6000.
+        12.5  
+        0.      7000.
+        12.5
+        0.      7100.
+        12.5   
+        0.      7199.
+        12.5                                                           
+        0.      7200.                              
+        20.0
+        0.      7300.                              
+        20.0  
+        0.      7400.                              
+        20.0 
+        0.      7500.                              
+        20.0 
+        0.      7600.                              
+        20.0                             
+        0.      8000.                              
+        20.0  
+        0.      9000.                              
+        20.0   
+        0.      10000.                              
+        20.0  
+        0.      11000.                              
+        20.0 
+        0.      12000.                              
+        20.0 
+        0.      13000.                              
+        20.0 
+        0.      14000.                              
+        20.0                 
+
+$ Sun
+RSOURCE1 1      1.05E+110.00E+101.05E+113.85E+265788.0          1000
+$ Integration parameters
+I_PARAM EULER_V 0.0     10800.  1.0     1000    0.900   1.100                                                              
+
+ENDDATA

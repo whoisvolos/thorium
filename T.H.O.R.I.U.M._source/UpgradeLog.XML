@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="TOP">
+</Property><Property Name="Файл решения" Value="C:\Data\4110\Tao_TOP\TOP\TOP\TOP.sln">
+</Property><Property Name="Файл параметров пользователя" Value="C:\Data\4110\Tao_TOP\TOP\TOP\TOP.suo">
+</Property><Property Name="Date" Value="1 апреля 2009 г.">
+</Property><Property Name="Time" Value="10:08">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="TOP.sln" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\TOP.sln">
+</Event><Event ErrorLevel="0" Project="" Source="TOP.suo" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\TOP.suo">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="T.H.O.R.I.U.M.vbproj" Description="Успешно создана резервная копия файла проекта: C:\Data\4110\Tao_TOP\TOP\TOP\Backup\T.H.O.R.I.U.M.vbproj">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="T.H.O.R.I.U.M.vbproj.user" Description="Резервная копия проекта успешно создана как C:\Data\4110\Tao_TOP\TOP\TOP\Backup\T.H.O.R.I.U.M.vbproj.user">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="FEM.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\FEM.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Form1.designer.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\Form1.designer.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Form1.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\Form1.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Pult.Designer.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\Pult.Designer.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Pult.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\Pult.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="TOP_solver.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\TOP_solver.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Linear_algebra.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\Linear_algebra.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="MIP.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\MIP.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\AssemblyInfo.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\My Project\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\Application.Designer.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\My Project\Application.Designer.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\Resources.Designer.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\My Project\Resources.Designer.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\Settings.Designer.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\My Project\Settings.Designer.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="TOP.vb" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\TOP.vb">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\Application.myapp" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\My Project\Application.myapp">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\Settings.settings" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\My Project\Settings.settings">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Form1.resx" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\Form1.resx">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="My Project\Resources.resx" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\My Project\Resources.resx">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="Pult.resx" Description="Успешно создана резервная копия файла C:\Data\4110\Tao_TOP\TOP\TOP\Backup\Pult.resx">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="T.H.O.R.I.U.M.vbproj" Description="Проект успешно преобразован">
+</Event><Event ErrorLevel="3" Project="T.H.O.R.I.U.M" Source="T.H.O.R.I.U.M.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="TOP.sln" Description="Преобразование решения успешно завершено">
+</Event><Event ErrorLevel="3" Project="" Source="TOP.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="T.H.O.R.I.U.M" Source="T.H.O.R.I.U.M.vbproj" Description="Сканирование завершено: обновление файлов проекта не требуется.">
+</Event></UpgradeLog>

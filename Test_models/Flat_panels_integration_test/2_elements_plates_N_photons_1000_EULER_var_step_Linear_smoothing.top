@@ -1,0 +1,28 @@
+$
+$ Project thermal-optical properties
+$
+G_MEDIUM       3
+
+
+$ FTOP  Number	R_dif	R_ref	A	D	CDF
+FTOP    1       0.0     0.0     1.0     0.0      
+
+
+$ Radiation screen film properties
+MEDIUM1 1       1.1     1E-5    0.24    1000.
+        1       1       1       1       1       1
+$ Radiation screen film properties
+MEDIUM1 2       1.1     1E-5    0.24    1000.
+        1       1       1       1       1       1
+MEDIUM1 3       1.0     0.0     0.0     0.0
+        1       1       1       1       1       1
+$
+$ Test range
+$
+
+I_PARAM EULER_V 0.0     100.0   1.0     1000    0.999   1.001
+        Linear  20
+
+T_ALL   1       300.0
+
+ENDDATA

@@ -1,0 +1,44 @@
+$ NASTRAN input file created by the Patran 2007 r1b input file
+$ translator on July      24, 2008 at 10:15:25.
+$ Direct Text Input for Nastran System Cell Section
+$ Direct Text Input for File Management Section
+$ Linear Static Analysis, Database
+SOL 101
+$ Direct Text Input for Executive Control
+CEND
+TITLE = MSC.Nastran job created on 24-Jul-08 at 10:15:11
+ECHO = NONE
+$ Direct Text Input for Global Case Control Data
+SUBCASE 1
+$ Subcase name : Default
+   SUBTITLE=Default
+   DISPLACEMENT(SORT1,REAL)=ALL
+   SPCFORCES(SORT1,REAL)=ALL
+   STRESS(SORT1,REAL,VONMISES,BILIN)=ALL
+BEGIN BULK
+PARAM    POST    0
+PARAM   PRTMAXIM YES
+$ Direct Text Input for Bulk Data
+$ Elements and Element Properties for region : thin_steel
+PSHELL   1       1      .001     1               1
+PSHELL   2       2      .001     2               2
+$ Pset: "thin_aluminum" will be imported as: "pshell.2"
+CQUAD4   1       1       1       2       3       4
+CQUAD4   2       2       11      12      13      14
+$ Radiation screen material
+MAT1     1       3E9     0.      .3      1450.   0.      0.      0.              
+MAT1     2       3E9     0.      .3      1450.   0.      0.      0.              
+$ Nodes of the Entire Model
+GRID     1              0.0     0.0      -0.05
+GRID     2              1.0     0.0      -0.05
+GRID     3              1.0     1.0      -0.05
+GRID     4              0.0     1.0      -0.05
+
+GRID     11             0.0     0.0       0.05
+GRID     12             1.0     0.0       0.05
+GRID     13             1.0     1.0       0.05
+GRID     14             0.0     1.0       0.05
+
+$ Loads for Load Case : Default
+$ Referenced Coordinate Frames
+ENDDATA

@@ -1,0 +1,5 @@
+To launch T.H.O.R.I.U.M. 
+
+1. Install NET framework 2.0. or higher. It can be downloaded, for example, here http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=0856eacb-4362-4b0d-8edd-aab15c5e04f5
+
+2. Go to \T.H.O.R.I.U.M._source\bin\Release\T.H.O.R.I.U.M.exe
